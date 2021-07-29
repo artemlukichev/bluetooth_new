@@ -26,7 +26,7 @@ public class BtConnection {
         device = btAdapter.getRemoteDevice(mac); //получаем устройство
         if(device == null) return;//если устройство не включено
 
-        connectThread = new ConnectThread(context, btAdapter, device); //создаем поток
+        connectThread = new ConnectThread(btAdapter, device); //создаем поток
         connectThread.start();
 
 

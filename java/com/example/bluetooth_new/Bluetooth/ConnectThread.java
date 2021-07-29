@@ -34,6 +34,7 @@ public class ConnectThread extends Thread {
         btAdapter.cancelDiscovery();
         try {
             mSocket.connect();  //подключение
+            new ReceiveThread(mSocket).start();
             Log.d("MyLog", "Connected");
         } catch (IOException e) {
             Log.d("MyLog", "Not connected");

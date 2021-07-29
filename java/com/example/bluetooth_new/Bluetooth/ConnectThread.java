@@ -11,14 +11,14 @@ import java.io.IOException;
 import java.util.UUID;
 
 public class ConnectThread extends Thread {
-    private Context context; //доступ к памяти
+   
     private BluetoothAdapter btAdapter; //для соединения
     private BluetoothDevice device; //информация, полученная с MAC
     private BluetoothSocket mSocket;//сокет
     public static final String UUID = "0x180A";
 
-    public ConnectThread(Context context, BluetoothAdapter btAdapter, BluetoothDevice device) {
-        this.context = context;
+    public ConnectThread( BluetoothAdapter btAdapter, BluetoothDevice device) {
+       
         this.btAdapter = btAdapter;
         this.device = device;
 

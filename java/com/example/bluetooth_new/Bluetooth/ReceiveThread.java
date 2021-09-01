@@ -26,15 +26,13 @@ public class ReceiveThread extends  Thread {
 
     @Override
     public void run() {
-        byte[] value = Utils.VALUE_CLOCK_TIME;
-        Utils.sendValueToBle(MAC_KEY, Utils.UUID_TICD, Utils.UUID_TCID_CH, value);
-        rBuffer = new byte[1000];
+        rBuffer = new byte[8];
         while (true){
             try{
                 int size = inputS.read(rBuffer); //считываем в массив
                 String message = new String(rBuffer,0,size);
-                onDataRceived(value);
                 Log.d("MyLog","Message: "+ message); //что получаем из устройства
+                onDataRceived(message.getBytes());
             } catch (IOException e){ //если срыв соединения
                 break;
             }
@@ -54,5 +52,14 @@ public class ReceiveThread extends  Thread {
             int m = m1 + m2;
             int d = second & 0x1f;
         }
+    }
+
+    public void sendMessage(byte[] byteArray){
+        try{
+            outputS.write(byteArray);
+        }catch(IOException e){
+
+        }
+
     }
 }

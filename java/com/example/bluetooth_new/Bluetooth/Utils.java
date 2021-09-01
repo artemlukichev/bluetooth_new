@@ -44,7 +44,7 @@ public class Utils extends Thread {
     public static final byte[] VALUE_CLEAR_DEL_MEMORY = {(byte) 0x52, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00}; //CLEAR/DELETE ALL MEMORY
     public static final byte[] VALUE_NOTIFICATION= {(byte) 0x54, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00}; //NOTIFICATION FOR ENTERING COMMUNICATION MODE
 
-
+/*
     public final static int REQUEST_ENABLE_BT = 2001;
     private final Context mActivity;
     private final BluetoothAdapter mBluetoothAdapter;
@@ -131,5 +131,5 @@ public class Utils extends Thread {
         }
     }
 }
-
+*/
 }

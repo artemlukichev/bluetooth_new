@@ -38,13 +38,13 @@ public class Utils extends Thread {
     public static final byte[] VALUE_SERIAL_NUMBER_P1 = {(byte) 0x27, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00}; //READ DEVICE SERIAL NUMBER (PART 1)
     public static final byte[] VALUE_SERIAL_NUMBER_P2 = {(byte) 0x28, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00}; //READ DEVICE SERIAL NUMBER (PART 2)
     public static final byte[] VALUE_STORAGE_NUM_OF_DATA = {(byte) 0x2B, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00};
-    public static final byte[] VALUE_DEVICE_CLOCK_TIME = {(byte) 0x33, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00}; //WRITE DEVICE CLOCK TIME
+    public static byte[] VALUE_DEVICE_CLOCK_TIME = {(byte) 0x33, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00}; //WRITE DEVICE CLOCK TIME
     public static final byte[] VALUE_START_MEASUREMENT = {(byte) 0x41, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00}; //START AN INFRA-RED TEMPERATURE M.
     public static final byte[] VALUE_TURN_OFF = {(byte) 0x50, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00}; // TURN OFF THE DEVICE
     public static final byte[] VALUE_CLEAR_DEL_MEMORY = {(byte) 0x52, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00}; //CLEAR/DELETE ALL MEMORY
     public static final byte[] VALUE_NOTIFICATION= {(byte) 0x54, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00}; //NOTIFICATION FOR ENTERING COMMUNICATION MODE
 
-/*
+    /*
     public final static int REQUEST_ENABLE_BT = 2001;
     private final Context mActivity;
     private final BluetoothAdapter mBluetoothAdapter;
